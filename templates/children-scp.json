@@ -49,14 +49,20 @@
       "Resource": [
         "arn:aws:iam::*:role/AdminRole",
         "arn:aws:iam::*:role/DCEPrincipal*",
+        "arn:aws:iam::*:role/AWSReservedSSO_AdministratorAccess*",
+        "arn:aws:iam::*:role/AWSServiceRoleForGlobalAccelerator",
+        "arn:aws:iam::*:role/AWSServiceRoleForOrganizations",
+        "arn:aws:iam::*:role/AWSServiceRoleForSSO",
+        "arn:aws:iam::*:role/AWSServiceRoleForSupport",
+        "arn:aws:iam::*:role/AWSServiceRoleForTrustedAdvisor",
+        "arn:aws:iam::*:role/OrganizationAccountAccessRole"
         "arn:aws:iam::*:policy/DCEPrincipal*"
       ],
       "Condition": {
         "StringNotLike": {
-          "aws:PrincipalARN":[ 
-		  "arn:aws:iam::*:role/DCEAdmin",
-		  "arn:aws:iam::*:role/OrganizationAccountAccessRole"
-		  ]
+          "aws:PrincipalARN":{ 
+		  "arn:aws:iam::*:role/DCEAdmin"
+          }		  
         }
       }
     },
