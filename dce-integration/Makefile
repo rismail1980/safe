@@ -13,7 +13,7 @@ vendor:
 	go mod vendor
 
 mod:
-	-go mod init github.com/Optum/dce
+	-go mod init github.com/rismail1980/dce
 
 vet:
 	go vet

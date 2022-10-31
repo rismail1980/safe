@@ -27,6 +27,18 @@ accounts:
         # AWS Organizations resources
         - type: "contains"
           value: "OrganizationAccountAccessRole"
+        - type: "contains"
+          value: "AWSReservedSSO_AdministratorAccess*"
+        - type: "contains"
+          value: "AWSServiceRoleForGlobalAccelerator"
+        - type: "contains"
+          value: "AWSServiceRoleForOrganizations"		  
+        - type: "contains"
+          value: "AWSServiceRoleForSSO"		  
+        - type: "contains"
+          value: "AWSServiceRoleForSupport"		  
+        - type: "contains"
+          value: "AWSServiceRoleForTrustedAdvisor"
       IAMRolePolicy:
         # DCE resources
         - type: "contains"
@@ -37,6 +49,18 @@ accounts:
           value: "{{ .PrincipalPolicy}}"
         - property: RoleName
           value: "OrganizationAccountAccessRole"
+        - property: RoleName
+          value: "AWSReservedSSO_AdministratorAccess*"
+        - property: RoleName
+          value: "AWSServiceRoleForGlobalAccelerator"
+        - property: RoleName
+          value: "AWSServiceRoleForOrganizations"		  
+        - property: RoleName
+          value: "AWSServiceRoleForSSO"		  
+        - property: RoleName
+          value: "AWSServiceRoleForSupport"		  
+        - property: RoleName
+          value: "AWSServiceRoleForTrustedAdvisor"
       IAMRolePolicyAttachment:
         # DCE resources
         - "{{ .PrincipalRole}} -> {{ .PrincipalPolicy}}"
@@ -45,3 +69,15 @@ accounts:
         # AWS Organizations resources
         - property: RoleName
           value: "OrganizationAccountAccessRole"
+        - property: RoleName
+          value: "AWSReservedSSO_AdministratorAccess*"
+        - property: RoleName
+          value: "AWSServiceRoleForGlobalAccelerator"
+        - property: RoleName
+          value: "AWSServiceRoleForOrganizations"		  
+        - property: RoleName
+          value: "AWSServiceRoleForSSO"		  
+        - property: RoleName
+          value: "AWSServiceRoleForSupport"		  
+        - property: RoleName
+          value: "AWSServiceRoleForTrustedAdvisor"        

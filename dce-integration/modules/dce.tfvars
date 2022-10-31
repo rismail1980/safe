@@ -10,12 +10,12 @@ check_budget_enabled = true
 check_budget_schedule_expression = "rate(1 hour)"
 fan_out_update_lease_status_schedule_expression = "rate(1 hour)"
 populate_reset_queue_schedule_expression = "rate(1 hour)"
-budget_notification_from_email = "noreply@example.com"
+budget_notification_from_email = "noreply@zeroandone.me"
 budget_notification_threshold_percentiles = [75, 100]
 principal_budget_period = "WEEKLY"
 
 max_lease_budget_amount = 1000
-max_lease_period = 7776000
+max_lease_period = 604800
 
 reset_nuke_toggle = "true"
 reset_nuke_template_bucket = "STUB"
